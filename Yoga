@@ -1,28 +1,28 @@
 Yoga
 
-Requisitos Funcionais
+
 
 Manter
-		Alunos  		 os alunos devem ser cadastrados com os seguintes campos ( Nome , Endereço ,Telefone, CPF,Data Nascimento, Sexo, Celular , E-mail, Turma  ) 
- 		Professor 	 o cadastro de professor dever  conter os seguintes campos (Nome ,Endereço ,Telefone, CPF,Data Nascimento, Sexo, Celular , E-mail , Modalidade) 
-		Turma 		a turma é composta pelos seguintes campos : código da turma , quantidade de alunos, professor,  modalidade, Turno/horário  
-		Cadastro de Horário  :   Eu como usuário devo conseguir consultas a quantidade de alunos e quantas vagas tenho na turma por horário.
+		Alunos  		 os alunos devem ser cadastrados com os seguintes campos ( Nome , Endereço ,Telefone, CPF,Data Nascimento, Sexo, Celular , E-mail, Turma,tipo de plano) 
+ 		Professor 		 o cadastro de professor dever  conter os seguintes campos (Nome ,Endereço ,Telefone, CPF,Data Nascimento, Sexo, Celular , E-mail , Modalidade) 
+		Turma 			a turma é composta pelos seguintes campos : código da turma , quantidade de alunos, professor,  modalidade, Turno/horário 
+		Aba de pagamento com campo de busca onde será inserido a informação de pagamento do aluno contendo id, nome, tipo de plano,
+data com dois campos com calendário inicio e fim, valor, pagamento efetuado
 
 
-
-
-Requisitos não Funcionais 
-
+		
+		Cadastro de Horário(Faltas diárias)  :   Eu como usuário devo conseguir consultar a quantidade de alunos e quantas vagas tenho na turma por horário.
 
 
  
 Cadastro de 	aluno(Nome, end, tel, email, cpf, id, forma de pagamento, turma)
-Cadastro de turma(crianças, idoso, gravida) (Nome, horário, professor, id) 
+Cadastro de turma(crianças, idoso, gravida) (Nome, horário, professor, id, inicio e fim) 
 Cadastro de horário(id, nome(manhã-07-08h), 
 Cadastro de professor
 Presença de aula
-Cursos de extensão
+Cursos de extensão(Criar uma tabela em branco para efetuar cadastro de novas turmas de cursos de extensão)
 Tipos de Pagamento(semestral, mensal)
+Formas de pagamento(dinheiro, cartão, boleto)
 Aula 2 vezes por semana
 
 
