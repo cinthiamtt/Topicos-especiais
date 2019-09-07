@@ -1,0 +1,36 @@
+Yoga
+
+Requisitos Funcionais
+
+Manter
+		Alunos  		 os alunos devem ser cadastrados com os seguintes campos ( Nome , Endereço ,Telefone, CPF,Data Nascimento, Sexo, Celular , E-mail, Turma  ) 
+ 		Professor 	 o cadastro de professor dever  conter os seguintes campos (Nome ,Endereço ,Telefone, CPF,Data Nascimento, Sexo, Celular , E-mail , Modalidade) 
+		Turma 		a turma é composta pelos seguintes campos : código da turma , quantidade de alunos, professor,  modalidade, Turno/horário  
+		Cadastro de Horário  :   Eu como usuário devo conseguir consultas a quantidade de alunos e quantas vagas tenho na turma por horário.
+
+
+
+
+Requisitos não Funcionais 
+
+
+
+ 
+Cadastro de 	aluno(Nome, end, tel, email, cpf, id, forma de pagamento, turma)
+Cadastro de turma(crianças, idoso, gravida) (Nome, horário, professor, id) 
+Cadastro de horário(id, nome(manhã-07-08h), 
+Cadastro de professor
+Presença de aula
+Cursos de extensão
+Tipos de Pagamento(semestral, mensal)
+Aula 2 vezes por semana
+
+
+/****************************************************
+Preço da aula 15zão
+Mensal 120,00
+Semestral 600,00	
+/****************************************************
+05/mes  --21/05  -05/06  05/07
+
+Turma e aluno é 1 pra N
