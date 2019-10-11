@@ -1,0 +1,13 @@
+<!-- Index -->
+
+<!-- Executando listagem para cada dado que for encontrado na tabela, mostrando os dados que foram passados
+como parametro dentro da tag #EACH
+ -->
+<h2>Listagem: </h2>
+
+{{#each alunos}}
+    <h1>{{nome}}</h1>
+    <p>{{Cpf}}</p>
+    <a href="/deletar/{{id}}"><button>Deletar</button></a>
+    <br>
+{{/each}}
