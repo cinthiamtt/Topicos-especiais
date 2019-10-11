@@ -1,10 +1,10 @@
 # Topicos-especiais
-Yoga
+**Yoga
 
-#Passo a Passo Execução do Node JS
+# Passo a Passo Execução do Node JS
 
-1-Instalar o Node JS (link abaixo):
-	https://nodejs.org/
+1 -Instalar o Node JS (link abaixo):
+	**https://nodejs.org/
 
 2-Criar uma nova pasta para o projeto;
 
@@ -44,4 +44,4 @@ Suporte Lukita Sousa:
 	patati,patazap: (64)9 98111-7851
 	Telefone p/ ligação: (34)9 9670-7851
 
-<3
+[X] 
