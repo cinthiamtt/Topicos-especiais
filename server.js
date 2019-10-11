@@ -11,7 +11,7 @@ const handlebars = require('express-handlebars')
 const BodyParser = require('body-parser')
 
 //models
-const Aluno = require('./models/Aluno')
+const Prof = require('./models/prof')
 
 
 // Config
@@ -25,23 +25,34 @@ app.use(BodyParser.json())
 
 // Rotas
 // Index (HOME)
+
 app.get('/', function(req, res) {
-    Aluno.findAll().then(function(alunos) {
-        res.render('home', { alunos: alunos })
+    Prof.findAll().then(function(prof) {
+        res.render('home', { prof: prof })
     })
 })
 
+
 // Cadastro, metodo GET para ser usado como localhost/cad
-app.get('/cad', function(req, res) {
-    res.render('form')
+app.get('/cadaluno', function(req, res) {
+    res.render('form_aluno')
+})
+
+// Cadastro, metodo GET para ser usado como localhost/cad do professor
+app.get('/cadprof', function(req, res) {
+    res.render('form_prof')
 })
 
 // Metodo Post recebendo os dados passados no html form.handlebars dentro do GET acima
-app.post('/add', function(req, res) {
-    Aluno.create({
-        // esses dados vem do model/Aluno, que sao os dados que serão inseridos nele
+app.post('/addprof', function(req, res) {
+    Prof.create({
+        // esses dados vem dos models, que sao os dados que serão inseridos nele
         nome: req.body.nome,
-        Cpf: req.body.cpf
+        cpf: req.body.cpf,
+        telefone: req.body.telefone,
+        celular: req.body.celular,
+        sexo: req.body.sexo,
+        data_nasc: req.body.data_nasc
     }).then(function() {
         res.redirect('/')
     }).catch(function(erro) {
@@ -53,7 +64,7 @@ app.post('/add', function(req, res) {
 // Rota para deletar o usuario, nota-se que foi passado um parametro de requisito usando o dois-pontos (:)
 app.get('/deletar/:id', function(req, res) {
     // destroy é uma função da biblioteca Aluno(que provem da biblioteca Sequelize)
-    Aluno.destroy({ where: { 'id': req.params.id } }).then(function() {
+    Prof.destroy({ where: { 'id': req.params.id } }).then(function() {
         res.send("REMOVIDO COM SUCESSO!")
     }).catch(function(erro) {
         res.send("NAO EXISTE!")
