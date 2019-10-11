@@ -1,10 +1,10 @@
 # Topicos-especiais
-**Yoga
+**Yoga**
 
 # Passo a Passo Execução do Node JS
 
 1 -Instalar o Node JS (link abaixo):
-	**https://nodejs.org/
+	**https://nodejs.org/**
 
 2-Criar uma nova pasta para o projeto;
 
