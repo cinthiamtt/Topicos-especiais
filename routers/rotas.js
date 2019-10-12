@@ -1,31 +1,8 @@
-//express - chamada
-const express = require("express");
-
-// criando um 'app' com a biblioteca express(para nao ficar utilizando express.algumacoisa toda hora)
-const app = express();
-
-//handlebars - chamada
-const handlebars = require('express-handlebars')
-
-//bodyParser
-const BodyParser = require('body-parser')
-
-//models
-const Prof = require('./models/prof')
-
-
-// Config
-// Template Engine - handlebars
-app.engine('handlebars', handlebars({ defaultLayout: 'main' }))
-app.set('view engine', 'handlebars')
-
-// Body-Parser
-app.use(BodyParser.urlencoded({ extended: false }))
-app.use(BodyParser.json())
-
 // Rotas
-// Index (HOME)
 
+const app = require('./server')
+
+// Index (HOME)
 app.get('/', function(req, res) {
     Prof.findAll().then(function(profs) {
         res.render('home', { profs: profs })
@@ -70,17 +47,3 @@ app.get('/deletar/:id', function(req, res) {
         res.send("NAO EXISTE!")
     })
 })
-
-//AULAA
-app.get('/person', function(req, res) {
-    res.render('form_prof')
-
-})
-
-
-
-
-//Porta - Servidor
-app.listen(8081, function() {
-    console.log("Servidor Local Rodando na URL: http://localhost:8081");
-});

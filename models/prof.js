@@ -29,3 +29,6 @@ const Prof = db.sequelize.define('professor', {
 
 
 module.exports = Prof
+
+
+//Prof.sync({ force: true })
