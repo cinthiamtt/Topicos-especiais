@@ -12,6 +12,7 @@ const BodyParser = require('body-parser')
 
 //models
 const Prof = require('./models/prof')
+const Aluno = require('./models/aluno')
 
 
 // Config
@@ -37,6 +38,24 @@ app.get('/', function(req, res) {
 app.get('/cadaluno', function(req, res) {
     res.render('form_aluno')
 })
+
+// Adicionando Alunos (POST)
+app.post('/addaluno', function(req, res) {
+    Aluno.create({
+        // esses dados vem dos models, que sao os dados que serão inseridos nele
+        nome: req.body.nome,
+        cpf: req.body.cpf,
+        telefone: req.body.telefone,
+        celular: req.body.celular,
+        sexo: req.body.sexo,
+        data_nasc: req.body.data_nasc
+    }).then(function() {
+        res.redirect('/')
+    }).catch(function(erro) {
+        res.send("Houve um erro: " + erro)
+    })
+})
+
 
 // Cadastro, metodo GET para ser usado como localhost/cad dos models
 app.get('/cadprof', function(req, res) {
@@ -73,10 +92,10 @@ app.get('/deletar/:id', function(req, res) {
 
 //AULAA
 app.get('/person', function(req, res) {
-    res.render('form_prof')
+        res.render('form_prof')
 
-})
-
+    })
+    //AULAA
 
 
 

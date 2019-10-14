@@ -1,6 +1,6 @@
 const db = require('../database/db')
 
-const Prof = db.sequelize.define('professor', {
+const Aluno = db.sequelize.define('aluno', {
     cpf: {
         type: db.Sequelize.STRING
     },
@@ -28,7 +28,7 @@ const Prof = db.sequelize.define('professor', {
 })
 
 
-module.exports = Prof
+module.exports = Aluno
 
 
-//Prof.sync({ force: true })
+//Aluno.sync({ force: true })
