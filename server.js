@@ -7,6 +7,9 @@ const app = express();
 //handlebars - chamada
 const handlebars = require('express-handlebars')
 
+//Exportando Rotas da pasta /Routers
+const profRouter = require("./routers/prof")
+
 //bodyParser
 const BodyParser = require('body-parser')
 
@@ -14,6 +17,8 @@ const BodyParser = require('body-parser')
 const Prof = require('./models/prof')
 const Aluno = require('./models/aluno')
 
+//path
+const path = require("path")
 
 // Config
 // Template Engine - handlebars
@@ -24,15 +29,11 @@ app.set('view engine', 'handlebars')
 app.use(BodyParser.urlencoded({ extended: false }))
 app.use(BodyParser.json())
 
+// public
+app.use(express.static(path.join(__dirname, "public")))
+
 // Rotas
-// Index (HOME)
-
-app.get('/', function(req, res) {
-    Prof.findAll().then(function(profs) {
-        res.render('home', { profs: profs })
-    })
-})
-
+app.use('/prof', profRouter)
 
 // Cadastro, metodo GET para ser usado como localhost/cad
 app.get('/cadaluno', function(req, res) {
@@ -42,29 +43,6 @@ app.get('/cadaluno', function(req, res) {
 // Adicionando Alunos (POST)
 app.post('/addaluno', function(req, res) {
     Aluno.create({
-        // esses dados vem dos models, que sao os dados que serão inseridos nele
-        nome: req.body.nome,
-        cpf: req.body.cpf,
-        telefone: req.body.telefone,
-        celular: req.body.celular,
-        sexo: req.body.sexo,
-        data_nasc: req.body.data_nasc
-    }).then(function() {
-        res.redirect('/')
-    }).catch(function(erro) {
-        res.send("Houve um erro: " + erro)
-    })
-})
-
-
-// Cadastro, metodo GET para ser usado como localhost/cad dos models
-app.get('/cadprof', function(req, res) {
-    res.render('form_prof')
-})
-
-// Metodo Post recebendo os dados passados no html form.handlebars dentro do GET acima
-app.post('/addprof', function(req, res) {
-    Prof.create({
         // esses dados vem dos models, que sao os dados que serão inseridos nele
         nome: req.body.nome,
         cpf: req.body.cpf,

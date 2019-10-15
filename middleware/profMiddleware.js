@@ -1,7 +1,7 @@
-const sequelize = require("../models/db");
+const sequelize = require("../database/db");
 const express = require("express");
 
-const profController = require("../controllers/profController");
+const profController = require("../controller/profController");
 
 module.exports = {
     async teste(req, res, next) {

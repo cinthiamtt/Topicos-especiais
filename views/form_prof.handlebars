@@ -1,24 +1,28 @@
-<form action="/addprof" method="post">
-    <p>Usuário</p>
-    <input type="text" name="nome">
-    <hr>
-    <p>Cpf</p>
-    <input type="text" name="cpf">
-    <hr>
-    <p>telefone</p>
-    <input type="text" name="telefone">
-    <hr>
-    <p>Celular</p>
-    <input type="text" name="celular">
-    <hr>
-    <p>sexo</p>
-    <input type="text" name="sexo">
-    <hr>
-    <p>Data Nascimento</p>
-    <input type="date" name="data_nasc">
-    <hr>
-    <br>
-    <button type="submit">Enviar</button>
-</form>
-
-<a href="/">Voltar</a>
+<h3>Cadastro Professor:</h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/prof/addprof" method="post">
+            <p>Usuário</p>
+            <input type="text" name="nome" class="form-control">
+            <hr>
+            <p>Cpf</p>
+            <input type="text" name="cpf" class="form-control">
+            <hr>
+            <p>telefone</p>
+            <input type="text" name="telefone" class="form-control">
+            <hr>
+            <p>Celular</p>
+            <input type="text" name="celular" class="form-control">
+            <hr>
+            <p>sexo</p>
+            <input type="text" name="sexo" class="form-control">
+            <hr>
+            <p>Data Nascimento</p>
+            <input type="date" name="data_nasc" class="form-control">
+            <hr>
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</div>
+<a href="/prof">Voltar</a>
