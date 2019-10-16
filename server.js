@@ -9,13 +9,14 @@ const handlebars = require('express-handlebars')
 
 //Exportando Rotas da pasta /Routers
 const profRouter = require("./routers/prof")
+const alunoRouter = require("./routers/aluno")
 
 //bodyParser
 const BodyParser = require('body-parser')
 
 //models
-const Prof = require('./models/prof')
-const Aluno = require('./models/aluno')
+const Prof = require('./models/profModel')
+const Aluno = require('./models/alunoModel')
 
 //path
 const path = require("path")
@@ -34,46 +35,8 @@ app.use(express.static(path.join(__dirname, "public")))
 
 // Rotas
 app.use('/prof', profRouter)
+app.use('/aluno', alunoRouter)
 
-// Cadastro, metodo GET para ser usado como localhost/cad
-app.get('/cadaluno', function(req, res) {
-    res.render('form_aluno')
-})
-
-// Adicionando Alunos (POST)
-app.post('/addaluno', function(req, res) {
-    Aluno.create({
-        // esses dados vem dos models, que sao os dados que serão inseridos nele
-        nome: req.body.nome,
-        cpf: req.body.cpf,
-        telefone: req.body.telefone,
-        celular: req.body.celular,
-        sexo: req.body.sexo,
-        data_nasc: req.body.data_nasc
-    }).then(function() {
-        res.redirect('/')
-    }).catch(function(erro) {
-        res.send("Houve um erro: " + erro)
-    })
-})
-
-
-// Rota para deletar o usuario, nota-se que foi passado um parametro de requisito usando o dois-pontos (:)
-app.get('/deletar/:id', function(req, res) {
-    // destroy é uma função da biblioteca Aluno(que provem da biblioteca Sequelize)
-    Prof.destroy({ where: { 'id': req.params.id } }).then(function() {
-        res.send("REMOVIDO COM SUCESSO!")
-    }).catch(function(erro) {
-        res.send("NAO EXISTE!")
-    })
-})
-
-//AULAA
-app.get('/person', function(req, res) {
-        res.render('form_prof')
-
-    })
-    //AULAA
 
 
 

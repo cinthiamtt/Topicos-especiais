@@ -1,27 +1,27 @@
 const express = require('express');
 const router = express.Router();
 
-const profController = require('../controller/profController');
-const profMid = require('../middleware/profMiddleware');
+const alunoController = require('../controller/alunoController')
+const alunoMid = require('../middleware/alunoMiddleware')
 
-const Prof = require("../models/profModel")
+const Aluno = require("../models/alunoModel")
 
-router.use("/", profMid.teste, profController.saveProf)
+router.use("/", alunoMid.teste, alunoController.saveAluno)
 
 router.get('/', function(req, res) {
-    Prof.findAll().then(function(profs) {
+    Aluno.findAll().then(function(profs) {
         res.render('home', { profs: profs })
     })
 })
 
-// Cadastro, metodo GET para ser usado como localhost/cad dos models
-router.get('/cadprof', function(req, res) {
-    res.render('form_prof')
+// Cadastro, metodo GET para ser usado como localhost/cad
+router.get('/cadaluno', function(req, res) {
+    res.render('form_aluno')
 })
 
-// Metodo Post recebendo os dados passados no html form.handlebars dentro do GET acima
-router.post('/addprof', function(req, res) {
-    Prof.create({
+// Adicionando Alunos (POST)
+router.post('/addaluno', function(req, res) {
+    Aluno.create({
         // esses dados vem dos models, que sao os dados que serão inseridos nele
         nome: req.body.nome,
         cpf: req.body.cpf,
@@ -30,7 +30,7 @@ router.post('/addprof', function(req, res) {
         sexo: req.body.sexo,
         data_nasc: req.body.data_nasc
     }).then(function() {
-        res.redirect('/prof')
+        res.redirect('/aluno')
     }).catch(function(erro) {
         res.send("Houve um erro: " + erro)
     })
@@ -38,8 +38,8 @@ router.post('/addprof', function(req, res) {
 
 // Rota para deletar o usuario, nota-se que foi passado um parametro de requisito usando o dois-pontos (:)
 router.get('/deletar/:id', function(req, res) {
-    // destroy é uma função da biblioteca do Model(que provem da biblioteca Sequelize)
-    Prof.destroy({ where: { 'id': req.params.id } }).then(function() {
+    // destroy é uma função da biblioteca Aluno(que provem da biblioteca Sequelize)
+    Aluno.destroy({ where: { 'id': req.params.id } }).then(function() {
         res.send("REMOVIDO COM SUCESSO!")
     }).catch(function(erro) {
         res.send("NAO EXISTE!")

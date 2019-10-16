@@ -1,11 +1,11 @@
 const sequelize = require("../database/db");
 const express = require("express");
 
-const profController = require("../controller/profController");
+const alunoController = require("../controller/alunoController");
 
 module.exports = {
     async teste(req, res, next) {
-        console.log("Seu request passou aqui mermão!")
+        console.log("Seu request passou aqui no mid do aluno, mermão!")
         next();
     }
 }
