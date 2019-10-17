@@ -14,10 +14,6 @@ const alunoRouter = require("./routers/aluno")
 //bodyParser
 const BodyParser = require('body-parser')
 
-//models
-const Prof = require('./models/profModel')
-const Aluno = require('./models/alunoModel')
-
 //path
 const path = require("path")
 
@@ -36,9 +32,6 @@ app.use(express.static(path.join(__dirname, "public")))
 // Rotas
 app.use('/prof', profRouter)
 app.use('/aluno', alunoRouter)
-
-
-
 
 //Porta - Servidor
 app.listen(8081, function() {

@@ -41,6 +41,7 @@ router.get('/deletar/:id', function(req, res) {
     // destroy é uma função da biblioteca do Model(que provem da biblioteca Sequelize)
     Prof.destroy({ where: { 'id': req.params.id } }).then(function() {
         res.send("REMOVIDO COM SUCESSO!")
+        res.redirect("/prof")
     }).catch(function(erro) {
         res.send("NAO EXISTE!")
     })

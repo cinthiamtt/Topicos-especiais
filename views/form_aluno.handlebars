@@ -1,23 +1,24 @@
 <!-- HTML de formulario de exemplo -->
-
-<form action="/addaluno" method="post">
-    <p>Usuário</p>
-    <input type="text" name="nome">
-    <p>Cpf</p>
-    <input type="text" name="cpf">
-    <p>telefone</p>
-    <input type="text" name="telefone">
-    <p>Celular</p>
-    <input type="text" name="celular">
-    <p>sexo</p>
-    <input type="text" name="sexo">
-    <p>Data Nascimento</p>
-    <input type="date" name="data_nasc">
-    <hr>
-    <br>
-    <hr>
-    <button type="submit">Enviar</button>
-</form>
+<div class="card">
+    <div class="card-body">
+        <form action="/aluno/addaluno" method="post">
+            <p>Usuário</p>
+            <input type="text" name="nome" class="form-control">
+            <p>Cpf</p>
+            <input type="text" name="cpf" class="form-control">
+            <p>telefone</p>
+            <input type="text" name="telefone" class="form-control">
+            <p>Celular</p>
+            <input type="text" name="celular" class="form-control">
+            <p>sexo</p>
+            <input type="text" name="sexo" class="form-control">
+            <p>Data Nascimento</p>
+            <input type="date" name="data_nasc" class="form-control">
+            <br>
+            <button type="submit" class="btn btn-success">Enviar</button>
+        </form>
+    </div>
+</div>
 
 
 <a href="/prof">Voltar</a>

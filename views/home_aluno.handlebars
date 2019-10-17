@@ -5,9 +5,9 @@ como parametro dentro da tag #EACH
  -->
 <h2>Listagem: </h2>
 
-{{#each profs}}
+{{#each alunos}}
     <h1>{{nome}}</h1>
     <p>{{cpf}}</p>
-    <a href="/prof/deletar/{{id}}"><button class="btn btn-danger">Deletar</button></a>
+    <a href="/aluno/deletar/{{id}}"><button class="btn btn-danger">Deletar</button></a>
     <br>
 {{/each}}

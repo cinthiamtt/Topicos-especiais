@@ -27,9 +27,6 @@ const Aluno = db.sequelize.define('aluno', {
     }
 })
 
-
-
-
 module.exports = Aluno
 
 

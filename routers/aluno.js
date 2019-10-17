@@ -9,8 +9,8 @@ const Aluno = require("../models/alunoModel")
 router.use("/", alunoMid.teste, alunoController.saveAluno)
 
 router.get('/', function(req, res) {
-    Aluno.findAll().then(function(profs) {
-        res.render('home', { profs: profs })
+    Aluno.findAll().then(function(alunos) {
+        res.render('home_aluno', { alunos: alunos })
     })
 })
 
@@ -41,6 +41,7 @@ router.get('/deletar/:id', function(req, res) {
     // destroy é uma função da biblioteca Aluno(que provem da biblioteca Sequelize)
     Aluno.destroy({ where: { 'id': req.params.id } }).then(function() {
         res.send("REMOVIDO COM SUCESSO!")
+        res.redirect("/aluno")
     }).catch(function(erro) {
         res.send("NAO EXISTE!")
     })
