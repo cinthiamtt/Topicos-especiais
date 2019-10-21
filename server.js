@@ -17,7 +17,26 @@ const BodyParser = require('body-parser')
 //path
 const path = require("path")
 
+//sessao
+const session = require("express-session")
+const flash = require("connect-flash")
+
 // Config
+//session
+app.use(session({
+    secret: "LiveYoga",
+    resave: true,
+    saveUninitialized: true
+}))
+app.use(flash())
+
+//middleware
+app.use(function(req, res, next) {
+    res.locals.success_msg = req.flash("success_msg")
+    res.locals.error_msg = req.flash("error_msg")
+    next()
+})
+
 // Template Engine - handlebars
 app.engine('handlebars', handlebars({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
@@ -26,7 +45,7 @@ app.set('view engine', 'handlebars')
 app.use(BodyParser.urlencoded({ extended: false }))
 app.use(BodyParser.json())
 
-// public
+// public/path
 app.use(express.static(path.join(__dirname, "public")))
 
 // Rotas

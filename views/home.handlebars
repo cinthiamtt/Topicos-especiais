@@ -1,13 +1,16 @@
 <!-- Index -->
 
-<!-- Executando listagem para cada dado que for encontrado na tabela, mostrando os dados que foram passados
-como parametro dentro da tag #EACH
- -->
+<!-- HOME da Rota Prof - Index de Listagem -->
 <h2>Listagem: </h2>
 
+<!-- TAG EACH é usada para pegar CADA dado encontrado no Banco -->
 {{#each profs}}
-    <h1>{{nome}}</h1>
-    <p>{{cpf}}</p>
-    <a href="/prof/deletar/{{id}}"><button class="btn btn-danger">Deletar</button></a>
-    <br>
+<div class="card m-4">
+    <div class="card-body">
+        <h4>{{nome}}</h4>
+        <strong>{{cpf}}</strong>
+        <a href="/prof/edit/{{id}}"><button class="btn btn-warning">Editar</button></a>
+        <a href="/prof/deletar/{{id}}"><button class="btn btn-danger">Deletar</button></a>
+    </div>
+</div>
 {{/each}}
