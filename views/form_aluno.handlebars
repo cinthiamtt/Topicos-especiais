@@ -1,24 +1,28 @@
 <!-- HTML de formulario de exemplo -->
+<h3>Cadastro Aluno:</h3>
 <div class="card">
     <div class="card-body">
         <form action="/aluno/addaluno" method="post">
-            <p>Usuário</p>
-            <input type="text" name="nome" class="form-control">
-            <p>Cpf</p>
-            <input type="text" name="cpf" class="form-control">
-            <p>telefone</p>
-            <input type="text" name="telefone" class="form-control">
-            <p>Celular</p>
-            <input type="text" name="celular" class="form-control">
-            <p>sexo</p>
-            <input type="text" name="sexo" class="form-control">
-            <p>Data Nascimento</p>
-            <input type="date" name="data_nasc" class="form-control">
+
+            <label for="Usuário">Usuário</label>
+                <input type="text" name="nome" class="form-control">
+            <label for="cpf">CPF</label>
+                <input type="text" name="cpf" class="form-control">
+            <label for="telefone">Telefone</label>
+                <input type="text" name="telefone" class="form-control">
+            <label for="celular">Celular</label>
+                <input type="text" name="celular" class="form-control">
+            <label for="sexo">Sexo</label>
+                <input type="text" name="sexo" class="form-control">
+            <label for="data_nasc">Data de Nascimento</label>
+                <input type="date" name="data_nasc" class="form-control">
             <br>
             <button type="submit" class="btn btn-success">Enviar</button>
         </form>
     </div>
 </div>
 
+<a href="/prof" class="btn btn-danger">Voltar</a>
 
-<a href="/prof">Voltar</a>
+
+{{> _footer}}

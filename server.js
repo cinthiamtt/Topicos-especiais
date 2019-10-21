@@ -10,6 +10,8 @@ const handlebars = require('express-handlebars')
 //Exportando Rotas da pasta /Routers
 const profRouter = require("./routers/prof")
 const alunoRouter = require("./routers/aluno")
+const adminRouter = require("./routers/admin")
+const indexRouter = require("./routers/index")
 
 //bodyParser
 const BodyParser = require('body-parser')
@@ -49,10 +51,14 @@ app.use(BodyParser.json())
 app.use(express.static(path.join(__dirname, "public")))
 
 // Rotas
+app.use('/', indexRouter)
 app.use('/prof', profRouter)
 app.use('/aluno', alunoRouter)
+app.use('/admin', adminRouter)
+
+
 
 //Porta - Servidor
 app.listen(8081, function() {
-    console.log("Servidor Local Rodando na URL: http://localhost:8081");
+    console.log(" -->> Servidor Local Rodando na URL: http://localhost:8081");
 });

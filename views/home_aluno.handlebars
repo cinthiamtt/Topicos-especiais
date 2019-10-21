@@ -1,5 +1,7 @@
 <!-- Index -->
-
+<header>
+    {{> _navbar }}
+</header>
 <!-- Executando listagem para cada dado que for encontrado na tabela, mostrando os dados que foram passados
 como parametro dentro da tag #EACH
  -->
@@ -11,3 +13,5 @@ como parametro dentro da tag #EACH
     <a href="/aluno/deletar/{{id}}"><button class="btn btn-danger">Deletar</button></a>
     <br>
 {{/each}}
+
+{{> _footer}}

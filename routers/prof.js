@@ -88,11 +88,11 @@ router.post('/editprof', function(req, res, next) {
         prof.sexo = req.body.sexo
         prof.data_nasc = req.body.data_nasc
 
-    })
+        prof.save().then(function() {
+            req.flash("success_msg", "Editado com sucesso!")
+            res.redirect("/prof")
+        })
 
-    profController.saveProf().then(function() {
-        req.flash("success_msg", "Editado com sucesso!")
-        res.redirect("/prof")
     }).catch(function(erro) {
         req.flash("error_msg", "Deu ruim!")
         res.redirect("/prof")
