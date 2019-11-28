@@ -1,0 +1,26 @@
+{
+    "development": {
+        "username": "postgres",
+        "password": "postgres",
+        "database": "yoguinha",
+        "host": "127.0.0.1",
+        "dialect": "postgresql",
+        "operatorsAliases": false
+    },
+    "test": {
+        "username": "postgres",
+        "password": "postgres",
+        "database": "Yoguinha",
+        "host": "127.0.0.1",
+        "dialect": "postgresql",
+        "operatorsAliases": false
+    },
+    "production": {
+        "username": "postgres",
+        "password": "postgres",
+        "database": "Yoguinha",
+        "host": "127.0.0.1",
+        "dialect": "postgresql",
+        "operatorsAliases": false
+    }
+}

@@ -1,0 +1,82 @@
+<title>Login</title>
+
+<style type="text/css">
+	.form-signin input[type="password"] {
+		color: black !important;
+		margin-bottom: 10px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	.form-signin .form-control {
+		color: black !important;
+		position: relative !important;
+		font-size: 16px;
+		height: auto !important;
+		padding: 10px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	body {
+		background: url("../images/one.jpg");
+	}
+
+	.colorgraph {
+		height: 7px;
+		border-top: 0;
+		background: #c4e17f;
+		border-radius: 5px;
+		background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+		background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+		background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+		background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+	}
+
+	.form-signin-heading {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	a,
+	h3,
+	p,
+	label {
+		color: white !important;
+	}
+</style>
+
+<div class="container-fluid h-100">
+	<div class="row justify-content-center align-items-center h-100" style="margin-top:60px;">
+		<div class="col-md-4">
+			<form method="POST" action="/prof/validate/prof" accept-charset="UTF-8" role="form" id="loginform"
+				class="form-signin">
+				<fieldset>
+					<h3 class="form-signin-heading"><strong>Bem Vindo :D</strong></h3>
+					<hr class="colorgraph">
+					<input class="form-control" placeholder="CPF" id="cpf" name="cpf" type="text" autofocus="" required="true"/>
+					<input class="form-control" placeholder="Senha" name="password" type="password" required="true"/>
+					<div class="checkbox">
+						<label>
+							<input name="remember" type="checkbox" value="Remember Me">Lembrar-me
+						</label>
+					</div>
+					<p class="text-center"><a href="/forgotpasswd">Esqueceu a Senha?</a></p>
+					<button class="btn btn-lg btn-dark btn-block" type="submit">Login</button>
+					<a  href="/" class="btn btn-lg btn-danger btn-block" type="button">Voltar</a>
+					<br>
+					<p class="text-center"><a href="/prof/register">Não possui Conta?</a></p>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+<script src="/assets/js/jquery.mask.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function ($) {
+        $('#cpf').mask('000.000.000-00');
+    })
+</script>

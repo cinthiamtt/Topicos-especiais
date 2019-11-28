@@ -1,0 +1,102 @@
+<title>Live! Yoga</title>
+<link rel="stylesheet" href="/css/main1.css" type="text/css">
+
+<body class="is-preload">
+
+    <!-- Header -->
+    <header id="header">
+        <h1>Live! Yoga</h1>
+        <nav>
+            <ul>
+                <span>Bem vindo {{prof.name}}</span>
+                <li><span><strong>|</strong></span></li>
+                <li><a href="#intro"><strong>Chamada<strong></a></li>
+                <li><span><strong>|</strong></span></li>
+                <li><a href="#one"><strong>Workshop</strong></a></li>
+                <li><span><strong>|</strong></span></li>
+                <li>
+                    <button class="btn btn-block btn-dark dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                        style="background: transparent; font-size: medium; border: 0;">
+                        <strong>Mais Opções</strong>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="/prof/update/editar_prof/{{prof.id}}">Editar Perfil</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/prof/login" style="background-color: red;">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Intro -->
+    <section id="intro" class="main style1 dark fullscreen">
+        <div class="content">
+            <form action="" method="POST">
+                <label for="buscaTurma">Escolha a Turma para fazer a Chamada</label>
+                <select class="form-control" id="buscaTurmaID">
+                    <option value="{{turma.id}}">{{turma.descricao}}</option>
+                </select>
+                <br>
+                <button type='button' class='btn btn-success'><strong>Pesquisar</strong></button>
+            </form>
+            <br>
+            <footer>
+                <a href="#one" class="button style2 down">More</a>
+            </footer>
+        </div>
+    </section>
+
+    <!-- One -->
+    <section id="one" class="main style1 light fullscreen">
+        <div class="row">
+            <form action="" method="POST">
+                <label for="Workshop">Workshops abertos!</label>
+                <select class="form-control" id="WorkshopID">
+                    <option value="{{workshop.id}}">{{workshop.descricao}}</option>
+                </select>
+                <br>
+                <button type='button' class='btn btn-success'>
+                    <strong>Pesquisar</strong>
+                </button>
+                <br>
+                <br>
+                <button type='button' class='btn btn-success'>
+                    <strong>Criar Workshop</strong>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+
+        <!-- Icons -->
+        <ul class="icons">
+            {{!-- <li><a href="https://www.twitter.com/liveyoga4" target="_blank" class="icon brands fa-twitter">
+                    <span class="label">Twitter</span></a>
+            </li>
+            <li><a href="https://www.facebook.com/studioliveyoga" target="_blank"
+                    class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/live.yoga" target="_blank" class="icon brands fa-instagram"><span
+                        class="label">Instagram</span></a></li> --}}
+        </ul>
+
+        <!-- Menu -->
+        <ul class="menu">
+            <li style="color:white;">&copy; Copyright 2019</li>
+            <li style="color:white;">Live Yoga</a></li>
+        </ul>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/jquery.poptrox.min.js"></script>
+    <script src="/assets/js/jquery.scrolly.min.js"></script>
+    <script src="/assets/js/jquery.scrollex.min.js"></script>
+    <script src="/assets/js/browser.min.js"></script>
+    <script src="/assets/js/breakpoints.min.js"></script>
+    <script src="/assets/js/util.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>

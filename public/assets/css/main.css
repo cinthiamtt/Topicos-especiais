@@ -2299,6 +2299,12 @@ body.is-touch .main {
     background-repeat: repeat, no-repeat;
 }
 
+.dropdown,
+.dropdown-item,
+.dropdown-menu {
+    color: black !important;
+}
+
 
 /* One */
 

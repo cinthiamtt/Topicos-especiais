@@ -1,24 +1,31 @@
-<head>
-	<title>Live Yoga</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-</head>
+<title>Live! Yoga</title>
+<link rel="stylesheet" href="assets/css/main.css"/>
 
 <body class="is-preload">
 
 	<!-- Header -->
 	<header id="header">
-		<h1><a class="navbar-brand" href="/">Live! Yoga</a></h1>
+		<h1>Live! Yoga</h1>
+	
 		<nav>
 			<ul>
 				<li><a href="#intro"><strong>Home<strong></a></li>
-				<li><a href="#one">Modalidades</a></li>
 				<li><a href="#two">Sobre Nós</a></li>
-				<li><a href="/prof">Professor</a></li>
+				<li><a href="#one">Modalidades</a></li>
 				<li><a href="#work">Fotos</a></li>
 				<li><a href="#contact">Contato</a></li>
+				<li>
+					<button class="btn-dark dropdown-toggle btn-sm" type="button" id="dropdownMenuButton"
+						data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+						style="background: transparent; font-size: medium; border: 0;">
+						<strong>Login</strong>
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="aluno/login">Aluno</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="prof/login">Professor</a>
+					</div>
+				</li>
 			</ul>
 		</nav>
 	</header>
@@ -29,9 +36,7 @@
 			<header>
 				<h2 style="color:black;">Namastê</h2>
 			</header>
-			<p style="color:black;">Bem vindo ao <strong>Live Yoga</strong> o site da sua academia de yoga.
-				<!--<a href="https://html5up.net">HTML5 UP</a><br />
-					and released for free under the <a href="https://html5up.net/license">Creative Commons Attribution license</a>.</p>-->
+			<p style="color:black;">Bem vindo ao <strong>Live Yoga</strong>, o site da sua academia de yoga.
 				<footer>
 					<a href="#one" class="button style2 down">More</a>
 				</footer>
@@ -42,14 +47,13 @@
 	<section id="one" class="main style2 right dark fullscreen">
 		<div class="content box style2">
 			<header>
-				<h2> Hatha Yoga</h2>
+				<h2>Sobre Nós </h2>
 			</header>
-			<p>Considerado como yoga clássico, o Hatha Yoga se tornou um dos tipos mais populares do ocidente porque a
-				prática é focada no condicionamento físico, no fortalecimento do corpo e no aumento da flexibilidade.
-
-				Durante as aulas, não são realizadas tantas posturas e elas não são tão intensas. É indicado para
-				aquelas pessoas que pretendem começar a se aventurar no yoga e a conhecer melhor a prática e seus
-				benefícios..</p>
+			<p>Somos um estúdio destinado à práticas de yoga , mais voltada para o Vinyasa Flow Yoga que é uma
+				modalidade mais voltada para o condicionamento fisico
+				e no fortalecimento do corpo, indicado para todas as idades. Temos turmas exclusivas para crianças e
+				idosos em horários distintos.</p>
+			<p> Agende sua aula experimental gratuita no telefone: (34)9 9826-2231 e seja bem vindo ao Live Yoga!!</p>
 		</div>
 		<a href="#two" class="button style2 down anchored">Next</a>
 	</section>
@@ -58,18 +62,16 @@
 	<section id="two" class="main style2 left dark fullscreen">
 		<div class="content box style2">
 			<header>
-				<h2>Ashtanga Yoga</h2>
+				<h2>Vinyasa Flow Yoga</h2>
 			</header>
-			<p>LO Ashtanga é uma ramificação que foi desenvolvida a partir do Hatha. As práticas de Ashtanga envolvem
-				seis séries de posturas fixas que vão sendo desenvolvidas pelo praticante ao longo do tempo e de acordo
-				com a capacidade do corpo de executar cada uma das posições.
+			<p>Vinyasa é a conexão entre mente, corpo e respiração. A sincronização entre a respiração e o movimento.
+				Essa respiração-movimento são os passos na nossa prática de Yoga, como observamos nos nove “Vinyasa” do
+				Surya Namaskar A (saudação ao sol). Metaforicamente, Vinyasa é a conexão entre todos esses nove passos
+				juntos para construir a sequência da prática no dia. Vinyasa é como uma ponte que conecta nossa prática
+				do dia de hoje com o dia de amanhã, com o próximo ano e até com a próxima vida.
 
-				Não existe um tempo certo para o praticante avançar para a série seguinte, isso varia de acordo com cada
-				um e cada série se torna mais desafiadora.
+			</p>
 
-				O Ashtanga é uma prática para aqueles que buscam atividades físicas mais estimulantes e mais intensas e
-				seus principais benefícios estão associados ao ganho de força, à flexibilidade, ao equilíbrio, à
-				consciência corporal e ao alinhamento..</p>
 		</div>
 		<a href="#work" class="button style2 down anchored">Next</a>
 	</section>
@@ -117,8 +119,8 @@
 	<section id="contact" class="main style3 secondary">
 		<div class="content">
 			<header>
-				<h2>Entre em Contato.</h2>
-				<p>Tem dúvidas ? Entre em contato com a gente!</p>
+				<h2>Tem dúvidas?</h2>
+				<p>Entre em contato com a gente!</p>
 			</header>
 			<div class="box">
 				<form method="post" action="#">
@@ -135,7 +137,26 @@
 		</div>
 	</section>
 
-	{{> _footer}}
+	<!-- Footer -->
+	<footer id="footer">
+
+		<!-- Icons -->
+		<ul class="icons">
+			<li><a href="https://www.twitter.com/liveyoga4" target="_blank" class="icon brands fa-twitter"><span
+						class="label">Twitter</span></a></li>
+			<li><a href="https://www.facebook.com/studioliveyoga" target="_blank" class="icon brands fa-facebook-f"><span
+						class="label">Facebook</span></a></li>
+			<li><a href="https://www.instagram.com/live.yoga" target="_blank" class="icon brands fa-instagram"><span
+						class="label">Instagram</span></a></li>
+		</ul>
+
+		<!-- Menu -->
+		<ul class="menu">
+			<li style="color:white;">&copy; Copyright 2019</li>
+			<li style="color:white;"> Live Yoga</a></li>
+		</ul>
+
+	</footer>
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>

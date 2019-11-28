@@ -1,29 +1,39 @@
 {
-    "name": "topicos_especiais",
+    "name": "NodeJS",
     "version": "1.0.0",
-    "description": "Qualquer coisa mermao",
-    "main": "server.js",
+    "description": "A project for a Yoga academy",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon app.js"
+    },
+    "keywords": [],
+    "author": "Lucas Gabriel",
+    "license": "MIT",
     "dependencies": {
+        "bcrypt": "^3.0.6",
+        "bcryptjs": "^2.4.3",
+        "bluebird": "^3.7.1",
         "body-parser": "^1.19.0",
-        "bootstrap": "^4.3.1",
-        "class": "^0.1.4",
+        "bootstrap": "^4.4.0",
         "connect-flash": "^0.1.1",
-        "ejs": "^2.7.1",
+        "dotenv-safe": "^8.1.0",
         "express": "^4.17.1",
         "express-handlebars": "^3.1.0",
         "express-session": "^1.17.0",
-        "jquery": "^3.4.1",
-        "mongoose": "^5.7.1",
+        "inputmask": "^4.0.9",
+        "jquery-mask-plugin": "^1.14.16",
+        "jsonwebtoken": "^8.5.1",
+        "method-override": "^3.0.0",
+        "nodemon": "^1.19.4",
+        "passport": "^0.4.0",
+        "passport-local": "^1.0.0",
+        "path": "^0.12.7",
         "pg": "^7.12.1",
-        "pg-hstore": "^2.3.3",
-        "popups": "^1.1.3",
-        "sequelize": "^5.18.4"
+        "sequelize": "^5.21.2",
+        "vue": "^2.6.10"
     },
-    "devDependencies": {},
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node server.js"
-    },
-    "author": "Lucas Gabriel de Sousa",
-    "license": "ISC"
+    "devDependencies": {
+        "sequelize-cli": "^5.5.1"
+    }
 }
